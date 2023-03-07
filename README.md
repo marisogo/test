@@ -1,19 +1,30 @@
-<br>
-<img src="https://github.com/marisogo/test/blob/main/icone.png" alt="Taipy Logo" style="margin-top:20px" width="250" height="250" ></img>
 
-#  🐍 Welcome to Taipy 🐍
+<img align="left" src="https://github.com/marisogo/test/blob/main/icone.png" alt="Taipy Logo" width="350" height="350" ></img>
 <br>
-Turns Data and AI algorithms into full web apps in no time. How? Taipy GUI with Taipy Core pops out as a 360° platform to build production-ready web apps.
-** open source, 10000% python **
+<br>
+#  Welcome to Taipy 
+###  Turns Data and AI algorithms into full web apps in no time.
+###  How? Taipy GUI with Taipy Core pops out as a 360° platform to build production-ready web apps</div>  
+  
+<br>
+
+###  <div align="center">*Open Source, 100% Python*</div>
+
 
 <br>
 <br>
+<br>
 
-#  🔚 We make both **ends** meet 🔚
-##  TAIPY GUI - the frond end
-<img src="https://github.com/marisogo/test/blob/main/GUI.gif" alt="Taipy Logo" style="margin-top:20px" width="300" height="300" ></img>
-## TAIPY CORE - the back end
-<img src="https://github.com/marisogo/test/blob/main/CORE.png" alt="Taipy Logo" style="margin-top:20px" width="300" height="300" ></img>
+#  <div align="center">🔚 We make both **ends** meet 🔚</div>  
+<br>
+
+| TAIPY GUI - the frond end  | TAIPY CORE - the back end |
+| --------  | -------- |
+|<img src="https://github.com/marisogo/test/blob/main/taipyGUI.gif" alt="Taipy Logo" style="margin-top:20px" width="470" height="350"/> | <img src="https://github.com/marisogo/test/blob/main/taipyCORE.gif" alt="Taipy Logo" style="margin-top:20px" width="470" height="350"/>
+
+
+<br>
+<br>
 
 ## Installation
 
@@ -23,7 +34,7 @@ Open a terminal and run:
 $ pip install taipy
 ```
 
-You're all set! All aboard the Taipy journey 🚂
+*You're all set! All aboard the Taipy journey 🚂*
 
 <br>
 
@@ -36,39 +47,88 @@ Create a new file `taipy.py` with the following code:
 from taipy import Gui
 
 my_app="""
-#Demo
+#Welcome to Taipy
 ##Getting started with Taipy GUI
 
-<|{'WELCOME TO TAIPY'}|text|>
+<|{'How excited are you to try TAIPY?'}|text|>
+
+<|{my_param}|slider|min=1|max=100|>
+
+My excitement level: <|{my_param}|text|>
 """
+
+my_param=100
 
 Gui(page=my_app).run()
 ```
-Press RUN/CTRL+F5
+*Press RUN/CTRL+F5*  
 
-🎊 TADA! 🎊
-<img src="https://user-images.githubusercontent.com/7164864/215172915-cf087c56-e7ae-449a-83a4-b5fa0328d954.gif" width=300 alt="Little example"></img>
-### Ready for more
-Check out all our [getting started and documentation](https://docs.taipy.io/en/latest/)
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/taipyGUIdemo.gif" width=600 height=400 alt="GUI demo"></img></div>
+<div align="center">🎊 TADA! 🎊</div>  
 
+<br>
+<br>
+
+## <div align="center">*Gimme more*</div>
+*<div align="center">Check out all our [getting started and documentation](https://docs.taipy.io/en/latest/)</div>*
+
+<br>
 <br>
 
 ## EN-CORE?
 
-### Tiny Taipy CORE Demo
+#### <div align="center">Let's create a quick pipeline that doubles our input number 43</div>  
+<br>
+
+### Taipy Studio - The easy peasy way
+*You can use the CORE editor called Taipy Studio in VSCode.* 
+
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/taipySTUDIOdemo.gif" width=600 height=400 alt="GUI demo"></img></div>  
 
 <br>
 
+### Taipy CORE - a walk on the code side
+*Low Code your DAGs* 
 
-## Usage
-  - [Taipy](#taipy)
-  - [License](#license)
-  - [Usage](#usage)
-  - [What is Taipy](#what-is-taipy)
-  - [Installation](#installation)
-  - [Contributing](#contributing)
-  - [Code of conduct](#code-of-conduct)
-  - [Directory Structure](#directory-structure)
+```python
+import taipy as tp
+from taipy import Config
+
+#function
+def double(nb):
+    return nb * 2
+
+input_data=43
+
+#datanodes
+input_data_node_cfg = Config.configure_data_node("input", default_data=input_data)
+output_data_node_cfg = Config.configure_data_node("output")
+
+# Configuration of task
+task_cfg = Config.configure_task("double",
+                                 double,
+                                 input_data_node_cfg,
+                                 output_data_node_cfg)
+
+# Configuration of the pipeline and scenario
+pipeline_cfg = Config.configure_pipeline("my_pipeline", [task_cfg])
+scenario_cfg = Config.configure_scenario("my_scenario", [pipeline_cfg])
+
+# my_scenario is the id of the scenario configured
+scenario_cfg = Config.scenarios['my_scenario']
+
+tp.Core().run()
+
+# Creation of the scenario and execution
+scenario = tp.create_scenario(scenario_cfg)
+tp.submit(scenario)
+
+print("Value at the end of task", scenario.output.read())
+```
+<br>
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/taipyCOREdemo.gif" width=600 height=400 alt="CORE demo"></img></div>    
+
+<br>
 
 
 ## Contributing ⚒⚒
