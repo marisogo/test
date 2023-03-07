@@ -15,12 +15,12 @@
 <br>
 <br>
 
-#  <div align="center">🔚 We make both **ends** meet 🔚</div>  
+#  <div align="center"> 📊 We make both ends meet ⚙️ </div>  
 <br>
 
 | TAIPY GUI - the frond end  | TAIPY CORE - the back end |
 | --------  | -------- |
-|<img src="https://github.com/marisogo/test/blob/main/taipyGUI.gif" alt="Taipy Logo" style="margin-top:20px" width="470" height="350"/> | <img src="https://github.com/marisogo/test/blob/main/taipyCORE.gif" alt="Taipy Logo" style="margin-top:20px" width="470" height="350"/>
+|<img src="https://github.com/marisogo/test/blob/main/taipyGUI.gif" alt="Taipy Logo" style="margin-top:20px" width="400" height="300"/> | <img src="https://github.com/marisogo/test/blob/main/taipyCORE.gif" alt="Taipy Logo" style="margin-top:20px" width="400" height="300"/>
 
 
 <br>
