@@ -47,10 +47,10 @@ Create a new file `taipy.py` with the following code:
 from taipy import Gui
 
 my_app="""
-#Welcome to Taipy
-##Getting started with Taipy GUI
+# Welcome to Taipy
+## Getting started with Taipy GUI
 
-<|{'How excited are you to try TAIPY?'}|text|>
+### How excited are you to try TAIPY?
 
 <|{my_param}|slider|min=1|max=100|>
 
@@ -104,17 +104,17 @@ input_data=43
 input_data_node_cfg = Config.configure_data_node("input", default_data=input_data)
 output_data_node_cfg = Config.configure_data_node("output")
 
-# Configuration of task
+#Configuration of task
 task_cfg = Config.configure_task("double",
                                  double,
                                  input_data_node_cfg,
                                  output_data_node_cfg)
 
-# Configuration of the pipeline and scenario
+#Configuration of the pipeline and scenario
 pipeline_cfg = Config.configure_pipeline("my_pipeline", [task_cfg])
 scenario_cfg = Config.configure_scenario("my_scenario", [pipeline_cfg])
 
-# my_scenario is the id of the scenario configured
+#my_scenario is the id of the scenario configured
 scenario_cfg = Config.scenarios['my_scenario']
 
 tp.Core().run()
