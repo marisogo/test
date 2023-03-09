@@ -33,7 +33,7 @@
     
 | TAIPY GUI - the frond end  | TAIPY CORE - the back end |
 | --------  | -------- |
-|<img src="https://github.com/marisogo/test/blob/main/taipyGUI.gif" alt="Taipy Logo"  width="350" height="250"/> | <img src="https://github.com/marisogo/test/blob/main/taipyCORE.gif" alt="Taipy Logo"  width="350" height="250"/>
+|<img src="https://github.com/marisogo/test/blob/main/taipyGUI.gif" alt="Taipy Logo"  width="400" height="300"/> | <img src="https://github.com/marisogo/test/blob/main/taipyCORE.gif" alt="Taipy Logo"  width="400" height="300"/>
     
 </div> 
 
