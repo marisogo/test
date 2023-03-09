@@ -29,11 +29,13 @@
 
 #  <div align="center"> 📊 We make both ends meet ⚙️ </div>  
 <br>
-
+ <div align="center">
+    
 | TAIPY GUI - the frond end  | TAIPY CORE - the back end |
 | --------  | -------- |
 |<img src="https://github.com/marisogo/test/blob/main/taipyGUI.gif" alt="Taipy Logo"  width="350" height="250"/> | <img src="https://github.com/marisogo/test/blob/main/taipyCORE.gif" alt="Taipy Logo"  width="350" height="250"/>
-
+    
+</div> 
 
 <br>
 <br>
