@@ -3,9 +3,21 @@
 <br>
 <br>
 #  Welcome to Taipy 
+<p align="left">
+    <a href="https://pypi.python.org/pypi/taipy/" alt="PyPI version">
+        <img alt="PyPI" src="https://img.shields.io/pypi/v/taipy?color=ff462b&labelColor=283282"></a>
+    <a href="https://pepy.tech/badge/taipy/" alt="Downloads">
+        <img src="https://img.shields.io/pypi/dm/taipy?color=ff462b&labelColor=283282" /></a>
+    <a href="https://www.youtube.com/@taipy8009" alt="YouTube">
+        <img src="https://img.shields.io/badge/youtube-click_to_watch_videos-red.svg?color=ff462b&labelColor=283282&logo=youtube" /></a>
+     <a href="https://twitter.com/Taipy_io" alt="Twitter">
+        <img src="https://img.shields.io/badge/twitter-click_for_tweets-red.svg?color=ff462b&labelColor=283282&logo=twitter" /></a>
+</p>
+
 ###  Turns Data and AI algorithms into full web apps in no time.
 ###  How? Taipy GUI with Taipy Core pops out as a 360° platform to build production-ready web apps</div>  
   
+<br>
 <br>
 
 ###  <div align="center">*Open Source, 100% Python*</div>
@@ -20,7 +32,7 @@
 
 | TAIPY GUI - the frond end  | TAIPY CORE - the back end |
 | --------  | -------- |
-|<img src="https://github.com/marisogo/test/blob/main/taipyGUI.gif" alt="Taipy Logo"  width="400" height="300"/> | <img src="https://github.com/marisogo/test/blob/main/taipyCORE.gif" alt="Taipy Logo"  width="400" height="300"/>
+|<img src="https://github.com/marisogo/test/blob/main/taipyGUI.gif" alt="Taipy Logo"  width="350" height="250"/> | <img src="https://github.com/marisogo/test/blob/main/taipyCORE.gif" alt="Taipy Logo"  width="350" height="250"/>
 
 
 <br>
