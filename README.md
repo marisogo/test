@@ -1,6 +1,7 @@
-
-<img align="left" src="https://github.com/marisogo/test/blob/main/icone.png" alt="Taipy Logo" width="350" height="350" ></img>
 <br>
+<br>
+
+<img align="left" src="https://github.com/marisogo/test/blob/main/logo_borders.png" alt="Taipy Logo" width="150" height="150" ></img>
 <br>
 #  Welcome to Taipy 
 <p align="left">
@@ -12,15 +13,19 @@
         <img src="https://img.shields.io/badge/youtube-click_to_watch_videos-red.svg?color=ff462b&labelColor=283282&logo=youtube" /></a>
      <a href="https://twitter.com/Taipy_io" alt="Twitter">
         <img src="https://img.shields.io/badge/twitter-click_for_tweets-red.svg?color=ff462b&labelColor=283282&logo=twitter" /></a>
-</p>
+</p> 
 
-###  Turns Data and AI algorithms into full web apps in no time.
+<br>
+
+###  <div align="left">Turns Data and AI algorithms into full web apps in no time. 
 ###  How? Taipy GUI with Taipy Core pops out as a 360° platform to build production-ready web apps</div>  
-  
+
+ 
+
 <br>
 <br>
 
-###  <div align="center">*Open Source, 100% Python*</div>
+###  <div align="left">*Open Source, 100% Python*</div>
 
 
 <br>
