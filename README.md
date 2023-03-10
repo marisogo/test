@@ -39,6 +39,7 @@
 | TAIPY GUI - the frond end  | TAIPY CORE - the back end |
 | --------  | -------- |
 |<img src="https://github.com/marisogo/test/blob/main/taipyGUI.gif" alt="Taipy Logo"  width="400" height="300"/> | <img src="https://github.com/marisogo/test/blob/main/taipyCORE.gif" alt="Taipy Logo"  width="400" height="300"/>
+
     
 </div> 
 
@@ -88,7 +89,7 @@ Gui(page=my_app).run()
 <br>
 <br>
 
-## <div align="center">*Gimme more*</div>
+## <div align="center">*GUImme more*</div>
 *<div align="center">Check out all our [getting started and documentation](https://docs.taipy.io/en/latest/)</div>*
 
 <br>
@@ -102,7 +103,10 @@ Gui(page=my_app).run()
 ### Taipy Studio - The easy peasy way
 *You can use the CORE editor called Taipy Studio in VSCode.* 
 
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/taipySTUDIOdemo.gif" width=600 height=400 alt="GUI demo"></img></div>  
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/taipySTUDIOdemo.gif" width=600 height=400 alt="GUI demo"></img></div> 
+
+## <div align="center">*Gimme more*</div>
+*<div align="center">Check out all our [getting started and documentation](https://docs.taipy.io/en/latest/)</div>*
 
 <br>
 
@@ -120,14 +124,14 @@ def double(nb):
 input_data=43
 
 #datanodes
-input_data_node_cfg = Config.configure_data_node("input", default_data=input_data)
-output_data_node_cfg = Config.configure_data_node("output")
+input_data_node_cfg = Config.configure_data_node(id="input", default_data=input_data)
+output_data_node_cfg = Config.configure_data_node(id="output")
 
 #Configuration of task
-task_cfg = Config.configure_task("double",
-                                 double,
-                                 input_data_node_cfg,
-                                 output_data_node_cfg)
+task_cfg = Config.configure_task(id="double",
+                                 function=double,
+                                 input=input_data_node_cfg,
+                                 output=output_data_node_cfg)
 
 #Configuration of the pipeline and scenario
 pipeline_cfg = Config.configure_pipeline("my_pipeline", [task_cfg])
@@ -145,10 +149,9 @@ tp.submit(scenario)
 print("Value at the end of task", scenario.output.read())
 ```
 <br>
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/taipyCOREdemo.gif" width=600 height=400 alt="CORE demo"></img></div>    
 
-<br>
-
+## <div align="center">*Gimme Core*</div>
+*<div align="center">Check out our [getting started](https://docs.taipy.io/en/latest/getting_started/getting-started-gui/) and [documentation](https://docs.taipy.io/en/latest/manuals/gui/)</div>*
 
 ## Contributing ⚒⚒
 
@@ -168,15 +171,3 @@ the License. You may obtain a copy of the License at
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
 an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
 specific language governing permissions and limitations under the License.
-
-
-## Directory Structure
-
-- `taipy`:
-    - `_run.py`: The python module exposing the method `run` to use to start a Taipy application.
-- `CODE_OF_CONDUCT.md`: Code of conduct for members and contributors of _taipy_.
-- `CONTRIBUTING.md`: Instructions to contribute to _taipy_.
-- `INSTALLATION.md`: Instructions to install _taipy_.
-- `LICENSE`: The Apache 2.0 License.
-- `README.md`: Current file.
-- `setup.py`: The setup script managing building, distributing, and installing _taipy_.
