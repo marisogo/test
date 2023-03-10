@@ -90,7 +90,7 @@ Gui(page=my_app).run()
 <br>
 
 ## <div align="center">*GUImme more*</div>
-*<div align="center">Check out all our [getting started and documentation](https://docs.taipy.io/en/latest/)</div>*
+*<div align="center">Check out our [getting started](https://docs.taipy.io/en/latest/getting_started/getting-started-gui/) and [documentation](https://docs.taipy.io/en/latest/manuals/gui/)</div>*
 
 <br>
 <br>
@@ -105,8 +105,9 @@ Gui(page=my_app).run()
 
 <div align="center"><img src="https://github.com/marisogo/test/blob/main/taipySTUDIOdemo.gif" width=600 height=400 alt="GUI demo"></img></div> 
 
-## <div align="center">*Gimme more*</div>
-*<div align="center">Check out all our [getting started and documentation](https://docs.taipy.io/en/latest/)</div>*
+## <div align="center">*Want to be Studio-us?*</div>
+*<div align="center">Check out our [documentation]([https://docs.taipy.io/en/latest/](https://docs.taipy.io/en/latest/manuals/studio/)
+and [getting started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) </div>*
 
 <br>
 
@@ -151,7 +152,7 @@ print("Value at the end of task", scenario.output.read())
 <br>
 
 ## <div align="center">*Gimme Core*</div>
-*<div align="center">Check out our [getting started](https://docs.taipy.io/en/latest/getting_started/getting-started-gui/) and [documentation](https://docs.taipy.io/en/latest/manuals/gui/)</div>*
+*<div align="center">Check out our [getting started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) and [documentation](https://docs.taipy.io/en/latest/manuals/core/) </div>*
 
 ## Contributing ⚒⚒
 
