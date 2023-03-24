@@ -81,7 +81,7 @@ my_param=100
 
 Gui(page=my_app).run()
 ```
-*Press RUN/CTRL+F5*  
+*RUN*🏃🏽‍♀️  
 
 <div align="center"><img src="https://github.com/marisogo/test/blob/main/taipyGUIdemo.gif" width=600 height=400 alt="GUI demo"></img></div>
 <div align="center">🎊 TADA! 🎊</div>  
@@ -98,7 +98,7 @@ Gui(page=my_app).run()
 ## EN-CORE?
 
 #### <div align="center">Let's create a quick pipeline that filters movie data based on the genre you choose. The output will be the 7 most popular movies for that genre</div>  
-##### Here is our filter function
+*Here is our filter function*
 ```python
 def filter_genre(initial_dataset: pd.DataFrame, selected_value):
     filtered_dataset = initial_dataset[initial_dataset['genres'].str.contains(selected_value)]
@@ -108,7 +108,7 @@ def filter_genre(initial_dataset: pd.DataFrame, selected_value):
 <br>
 
 ### Taipy Studio - The easy peasy way
-*You can use Taipy Studio to configure your pipeline easily in VSCode.* 
+*You can use Taipy Studio to configure your pipeline easily in VSCode* 
 
 <div align="center"><img src="https://github.com/marisogo/test/blob/main/movie_app_studio.gif" width=600 height=400 alt="GUI demo"></img></div> 
 
@@ -146,14 +146,19 @@ print("Top 7 picks for Fantasy genre", top_7[['Title', 'Popularity %']])
 ```
 <br>
 
-<div align="center">🎊 TADA! 🎊</div> 
+<div align="center">🎊 TADA! 🎊</div>  
 
-*LOTR fan here so not suprised!* 
+<br>
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/output_core.gif" width=600 height=300 alt="GUI demo"></img></div> 
+<div align="center"><em>LOTR fan here so not suprised!</em></div>
+
+<br>
 
 ### <div align="center">*Want to be Studio-us?*</div>
 *<div align="center">Check out our [documentation](https://docs.taipy.io/en/latest/manuals/studio/)
 and [getting started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) </div>*
 
+<br>
 <br>
 
 ### Taipy CORE - a walk on the code side
@@ -164,6 +169,8 @@ and [getting started](https://docs.taipy.io/en/latest/getting_started/getting-st
 ### <div align="center">*Gimme Core*</div>
 *<div align="center">Check out our [getting started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) and [documentation](https://docs.taipy.io/en/latest/manuals/core/) </div>*
 
+<br>
+<br>
 <br>
 
 ## GUI + CORE = 🎉FULL APP🎉
@@ -221,7 +228,8 @@ Gui(page=my_page).run()
 ```
 <br>
 
-<div align="center">🎊 TADA! 🎊</div> 
+<div align="center">🎊TADA!🎊</div>  
+<br>
 <div align="center"><img src="https://github.com/marisogo/test/blob/main/movie_genre_selector_app.gif" width=700 height=400 alt="GUI demo"></img></div> 
 
 <br>
