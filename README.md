@@ -110,7 +110,7 @@ def filter_genre(initial_dataset: pd.DataFrame, selected_value):
 ### Taipy Studio - The easy peasy way
 *You can use Taipy Studio to configure your pipeline easily in VSCode.* 
 
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/taipySTUDIOdemo.gif" width=600 height=400 alt="GUI demo"></img></div> 
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/movie_app_studio.gif" width=600 height=400 alt="GUI demo"></img></div> 
 
 <br>
 
@@ -168,6 +168,7 @@ and [getting started](https://docs.taipy.io/en/latest/getting_started/getting-st
 
 ## GUI + CORE = 🎉FULL APP🎉
 #### <div align="center">Let's add some GUI to our previous code and create a full web application</div>  
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/movie_genre_selector_app.gif" width=600 height=400 alt="GUI demo"></img></div> 
 
 ```python
 import taipy as tp
