@@ -89,7 +89,7 @@ Gui(page=my_app).run()
 <br>
 <br>
 
-## <div align="center">*GUImme more*</div>
+### <div align="center">*GUImme more*</div>
 *<div align="center">Check out our [getting started](https://docs.taipy.io/en/latest/getting_started/getting-started-gui/) and [documentation](https://docs.taipy.io/en/latest/manuals/gui/)</div>*
 
 <br>
@@ -97,62 +97,130 @@ Gui(page=my_app).run()
 
 ## EN-CORE?
 
-#### <div align="center">Let's create a quick pipeline that doubles our input number 43</div>  
+#### <div align="center">Let's create a quick pipeline that filters movie data based on the genre you choose. The output will be the 7 most popular movies for that genre</div>  
+##### Here is our filter function
+```python
+def filter_genre(initial_dataset: pd.DataFrame, selected_value):
+    filtered_dataset = initial_dataset[initial_dataset['genres'].str.contains(selected_value)]
+    filtered_data = filtered_dataset.nlargest(7, 'Popularity %')
+    return filtered_data
+```
 <br>
 
 ### Taipy Studio - The easy peasy way
-*You can use the CORE editor called Taipy Studio in VSCode.* 
+*You can use Taipy Studio to configure your pipeline easily in VSCode.* 
 
 <div align="center"><img src="https://github.com/marisogo/test/blob/main/taipySTUDIOdemo.gif" width=600 height=400 alt="GUI demo"></img></div> 
 
-## <div align="center">*Want to be Studio-us?*</div>
-*<div align="center">Check out our [documentation]([https://docs.taipy.io/en/latest/](https://docs.taipy.io/en/latest/manuals/studio/)
+<br>
+
+*Now, let's load this configuration and run it*
+```python
+import pandas as pd
+import taipy as tp
+from taipy import Config
+
+# Filter function for task
+def filter_genre(initial_dataset: pd.DataFrame, selected_value):
+    filtered_dataset = initial_dataset[initial_dataset['genres'].str.contains(selected_value)]
+    filtered_data = filtered_dataset.nlargest(7, 'Popularity %')
+    return filtered_data
+
+# Loading the configuration
+Config.load('config.toml')
+scenario_cfg = Config.scenarios['scenario']
+
+# Run of the Taipy Core service
+tp.Core().run()
+
+# Create a scenario for "Fantasy" genre
+scenario = tp.create_scenario(scenario_cfg)
+# Configure "Fantasy" in the selected_value_node
+scenario.selected_value_node.write('Fantasy')
+# Submit scenario
+tp.submit(scenario)
+# Get the best 7 picks for "Fantasy" genre 
+top_7 = scenario.filtered_data.read()
+print("Top 7 picks for Fantasy genre", top_7[['Title', 'Popularity %']])
+
+```
+<br>
+
+<div align="center">🎊 TADA! 🎊</div> 
+
+*LOTR fan here so not suprised!* 
+
+### <div align="center">*Want to be Studio-us?*</div>
+*<div align="center">Check out our [documentation](https://docs.taipy.io/en/latest/manuals/studio/)
 and [getting started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) </div>*
 
 <br>
 
 ### Taipy CORE - a walk on the code side
-*Low Code your DAGs* 
+*If you prefer coding your configurations, Taipy's got you 🫵 Check out the movie genre selector pipeline creation HERE [movie selector demo](https://docs.taipy.io/en/latest/manuals/studio/)*
+
+<br>
+
+### <div align="center">*Gimme Core*</div>
+*<div align="center">Check out our [getting started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) and [documentation](https://docs.taipy.io/en/latest/manuals/core/) </div>*
+
+<br>
+
+## GUI + CORE = 🎉FULL APP🎉
+#### <div align="center">Let's add some GUI to our previous code and create a full web application</div>  
 
 ```python
 import taipy as tp
-from taipy import Config
+import pandas as pd
+from taipy import Config, Scope, Gui
 
-#function
-def double(nb):
-    return nb * 2
+# Create a Taipy App that will output the 7 best movies for a genre
 
-input_data=43
+# Callback definition
+def modify_df(state):
+    scenario.selected_value_node.write(state.selected_value)
+    tp.submit(scenario)
+    state.df = scenario.filtered_data.read()    
+# Filter function for Task
+def filter_genre(initial_dataset: pd.DataFrame, selected_value):
+    filtered_dataset = initial_dataset[initial_dataset['genres'].str.contains(selected_value)]
+    filtered_data = filtered_dataset.nlargest(7, 'Popularity %')
+    return filtered_data
 
-#datanodes
-input_data_node_cfg = Config.configure_data_node(id="input", default_data=input_data)
-output_data_node_cfg = Config.configure_data_node(id="output")
+# Loading the configuration
+Config.load('config.toml')
+scenario_cfg = Config.scenarios['scenario']
 
-#Configuration of task
-task_cfg = Config.configure_task(id="double",
-                                 function=double,
-                                 input=input_data_node_cfg,
-                                 output=output_data_node_cfg)
-
-#Configuration of the pipeline and scenario
-pipeline_cfg = Config.configure_pipeline("my_pipeline", [task_cfg])
-scenario_cfg = Config.configure_scenario("my_scenario", [pipeline_cfg])
-
-#my_scenario is the id of the scenario configured
-scenario_cfg = Config.scenarios['my_scenario']
-
+# Run of the Taipy Core service
 tp.Core().run()
 
-# Creation of the scenario and execution
+# Create a scenario for "Fantasy" genre
 scenario = tp.create_scenario(scenario_cfg)
-tp.submit(scenario)
 
-print("Value at the end of task", scenario.output.read())
+# Get list of genres
+dataset = scenario.initial_dataset.read()
+list_genres = list(dataset['genres'].str.split('|').explode().unique())
+
+# Initialization of variables
+df = pd.DataFrame(columns=['Title', 'Popularity %'])
+selected_value = None
+
+# My page
+my_page = """
+# Film recommendation
+
+## Choose your favorite genre
+<|{selected_value}|selector|lov={list_genres}|on_change=modify_df|dropdown|>
+
+## Here are the top 7 picks
+<|{df}|chart|x=Title|y=Popularity %|type=bar|title=Film Popularity|>
+"""
+
+Gui(page=my_page).run()
 ```
 <br>
 
-## <div align="center">*Gimme Core*</div>
-*<div align="center">Check out our [getting started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) and [documentation](https://docs.taipy.io/en/latest/manuals/core/) </div>*
+<div align="center">🎊 TADA! 🎊</div> 
 
 ## Contributing ⚒⚒
 
