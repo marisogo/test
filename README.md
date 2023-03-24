@@ -168,7 +168,7 @@ and [getting started](https://docs.taipy.io/en/latest/getting_started/getting-st
 
 ## GUI + CORE = 🎉FULL APP🎉
 #### <div align="center">Let's add some GUI to our previous code and create a full web application</div>  
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/movie_genre_selector_app.gif" width=600 height=400 alt="GUI demo"></img></div> 
+
 
 ```python
 import taipy as tp
@@ -222,6 +222,9 @@ Gui(page=my_page).run()
 <br>
 
 <div align="center">🎊 TADA! 🎊</div> 
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/movie_genre_selector_app.gif" width=700 height=400 alt="GUI demo"></img></div> 
+
+<br>
 
 ## Contributing ⚒⚒
 
