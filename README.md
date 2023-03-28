@@ -7,8 +7,6 @@
 <p align="left">
     <a href="https://pypi.python.org/pypi/taipy/" alt="PyPI version">
         <img alt="PyPI" src="https://img.shields.io/pypi/v/taipy?color=ff462b&labelColor=283282"></a>
-    <a href="https://pepy.tech/badge/taipy/" alt="Downloads">
-        <img src="https://img.shields.io/pypi/dm/taipy?color=ff462b&labelColor=283282" /></a>
     <a href="https://www.youtube.com/@taipy8009" alt="YouTube">
         <img src="https://img.shields.io/badge/youtube-click_to_watch_videos-red.svg?color=ff462b&labelColor=283282&logo=youtube" /></a>
      <a href="https://twitter.com/Taipy_io" alt="Twitter">
@@ -142,8 +140,9 @@ tp.submit(scenario)
 # Get the best 7 picks for "Fantasy" genre 
 top_7 = scenario.filtered_data.read()
 print("Top 7 picks for Fantasy genre", top_7[['Title', 'Popularity %']])
-
 ```
+*RUN*🏃🏽‍♀️ 
+
 <br>
 
 <div align="center">🎊 TADA! 🎊</div>  
@@ -226,6 +225,8 @@ my_page = """
 
 Gui(page=my_page).run()
 ```
+*RUN*🏃🏽‍♀️ 
+
 <br>
 
 <div align="center">🎊TADA!🎊</div>  
