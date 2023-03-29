@@ -90,15 +90,21 @@ Gui(page=my_page).run()
 
 ## EN-CORE?
 
-#### <div align="center">Let's create a back-end execution, also called scenario in Taipy. Our scenario will filter movie data based on the genre you choose. The output of the scenario will be the seven most popular movies of that genre. </div>  
-*Here is our filter function - the task of our scenario*
+#### <div align="center">Let's create a back-end execution, also called scenario in Taipy Core. Our scenario will filter movie data based on the genre you choose. This scenario will be submitted each time the genre selection changes and output the seven most popular movies of that genre. </div>  
+<br>
+
+*Here is our filter function: it's a standard python function that will constitute our task in the scenario*
 ```python
-def filtering_genre(initial_dataset: pd.DataFrame, selected_value):
-    filtered_dataset = initial_dataset[initial_dataset['genres'].str.contains(selected_value)]
+def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
+    filtered_dataset = initial_dataset[initial_dataset['genres'].str.contains(selected_genre)]
     filtered_data = filtered_dataset.nlargest(7, 'Popularity %')
     return filtered_data
 ```
-<br>
+
+*This is the execution graph of the scenario we will be implemeting*
+
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/readme_exec_g.png" alt="Taipy Logo"  width="400" height="200"/></div> 
+
 
 ### Taipy Studio - The easy peasy way
 *You can use Taipy Studio to configure your pipeline easily in VSCode* 
@@ -115,7 +121,7 @@ and [getting started](https://docs.taipy.io/en/latest/getting_started/getting-st
 <br>
 <br>
 
-*Now, let's load this configuration and add a GUI on top for a 🎉FULL APPLICATION🎉 *
+*Now, let's load this configuration and add a GUI on top for a 🎉FULL APPLICATION🎉*
 ```python
 import taipy as tp
 import pandas as pd
@@ -188,7 +194,7 @@ Gui(page=my_page).run(port=5002)
 <br>
 
 ### Taipy CORE - a walk on the code side
-*If you prefer coding your configurations, Taipy's got you 🫵 Check out the movie genre selector pipeline creation HERE [movie selector demo](https://docs.taipy.io/en/latest/manuals/studio/)*
+<div align="center">If you prefer coding your configurations, Taipy's got you 🫵 Check out the movie genre selector scenario creation with Taipy Core [HERE](https://docs.taipy.io/en/latest/manuals/studio/) </div>
 
 <br>
 
@@ -198,8 +204,6 @@ Gui(page=my_page).run(port=5002)
 <br>
 <br>
 <br>
-
-
 
 ## Contributing ⚒⚒
 
