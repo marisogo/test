@@ -61,7 +61,7 @@ $ pip install taipy
 ### Tiny Taipy GUI Demo
 
 ```python
-my_page="""
+excitement_page="""
 # Welcome to Taipy
 ## Getting started with Taipy GUI
 ### How excited are you to try Taipy?
@@ -90,8 +90,8 @@ Gui(page=my_page).run()
 
 ## EN-CORE?
 
-#### <div align="center">Let's create a quick pipeline that filters movie data based on the genre you choose. The output will be the 7 most popular movies for that genre</div>  
-*Here is our filter function*
+#### <div align="center">Let's create a back-end execution, also called scenario in Taipy. Our scenario will filter movie data based on the genre you choose. The output of the scenario will be the seven most popular movies of that genre. </div>  
+*Here is our filter function - the task of our scenario*
 ```python
 def filtering_genre(initial_dataset: pd.DataFrame, selected_value):
     filtered_dataset = initial_dataset[initial_dataset['genres'].str.contains(selected_value)]
