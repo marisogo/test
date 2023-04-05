@@ -194,12 +194,14 @@ Gui(page=my_page).run(port=5002)
 <br>
 
 ### Taipy CORE - a walk on the code side
-<div align="center">If you prefer coding your configurations, Taipy's got you 🫵 Check out the movie genre selector scenario creation with Taipy Core [HERE](https://docs.taipy.io/en/latest/manuals/studio/) </div>
+<div align="left">If you prefer coding your configurations, Taipy's got you 🫵 </div>   
+
+*<div align="left">Check out the Movie Genre Filter scenario creation with this [Demo](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) </div>*
 
 <br>
 
 ### <div align="center">*Gimme Core*</div>
-*<div align="center">Check out our [getting started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) and [documentation](https://docs.taipy.io/en/latest/manuals/core/) </div>*
+*<div align="center">Check out our [Getting Started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) and [Documentation](https://docs.taipy.io/en/latest/manuals/core/) </div>*
 
 <br>
 <br>
