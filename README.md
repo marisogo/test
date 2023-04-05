@@ -36,7 +36,7 @@
     
 | TAIPY GUI - the frond end  | TAIPY Core - the back end |
 | --------  | -------- |
-|<img src="https://github.com/marisogo/test/blob/main/taipyGUI.gif" alt="Taipy Logo"  width="400" height="300"/> | <img src="https://github.com/marisogo/test/blob/main/taipyCORE.gif" alt="Taipy Logo"  width="400" height="300"/>
+|<img src="https://github.com/marisogo/test/blob/main/gui_intro_readme.gif" alt="Taipy Logo"  width="400" height="300"/> | <img src="https://github.com/marisogo/test/blob/main/core_intro_readme.gif" alt="Taipy Logo"  width="400" height="300"/>
 
     
 </div> 
@@ -76,7 +76,7 @@ Gui(page=my_page).run()
 ```
 *RUN*🏃🏽‍♀️  
 
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/taipyGUIdemo.gif" width=600 height=400 alt="GUI demo"></img></div>
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/gui_readme.gif" width=600 height=400 alt="GUI demo"></img></div>
 <div align="center">🎊 TADA! 🎊</div>  
 
 <br>
@@ -109,7 +109,7 @@ def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
 ### Taipy Studio - The easy peasy way
 *You can use Taipy Studio to configure your pipeline easily in VSCode* 
 
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/movie_app_studio.gif" width=600 height=400 alt="GUI demo"></img></div> 
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/studio_readme.gif" width=600 height=400 alt="GUI demo"></img></div> 
 
 <br>
 <br>
@@ -184,7 +184,7 @@ Gui(page=my_page).run(port=5002)
 
 <div align="center">🎊TADA!🎊</div>  
 <br>
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/movie_genre_selector_app.gif" width=700 height=400 alt="GUI demo"></img></div> 
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/app_readme.gif" width=700 height=400 alt="GUI demo"></img></div> 
 
 <br>
 
