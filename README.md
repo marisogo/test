@@ -76,7 +76,7 @@ Gui(page=my_page).run()
 ```
 *RUN*🏃🏽‍♀️  
 
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/gui_readme.gif" width=600 height=400 alt="GUI demo"></img></div>
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/gui_app_readme.gif" width=600 height=400 alt="GUI demo"></img></div>
 <div align="center">🎊 TADA! 🎊</div>  
 
 <br>
