@@ -90,10 +90,10 @@ Gui(page=my_page).run()
 
 ## EN-CORE?
 
-#### <div align="center">Let's create a back-end execution, also called scenario in Taipy Core. Our scenario will filter movie data based on the genre you choose. This scenario will be submitted each time the genre selection changes and output the seven most popular movies of that genre. </div>  
+#### <div align="center">Let's create a back-end execution, also called scenario using Taipy Core. Our scenario will filter movie data based on the genre you choose. This scenario will be submitted (i.e., executed) each time the genre selection changes and output the seven most popular movies of that genre. </div>  
 <br>
 
-*Here is our filter function: it's a standard python function that will constitute our task in the scenario*
+*Here is our filter function: it's a standard python function that will constitute our unique task in the scenario*
 ```python
 def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
     filtered_dataset = initial_dataset[initial_dataset['genres'].str.contains(selected_genre)]
@@ -107,16 +107,17 @@ def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
 
 
 ### Taipy Studio - The easy peasy way
-*You can use Taipy Studio to configure your pipeline easily in VSCode* 
+*You can use the Taipy Studio extension in VSCode to configure your pipeline easily* 
 
 <div align="center"><img src="https://github.com/marisogo/test/blob/main/studio_readme.gif" width=600 height=400 alt="GUI demo"></img></div> 
+*Your configuration is automatically saved as a toml file* 
 
 <br>
 <br>
 
 ### <div align="center">*Want to be Studio-us?*</div>
-*<div align="center">Check out our [documentation](https://docs.taipy.io/en/latest/manuals/studio/)
-and [getting started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) </div>*
+*<div align="center">Check out our [Documentation](https://docs.taipy.io/en/latest/manuals/studio/)
+and [Getting Started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) </div>*
 
 <br>
 <br>
@@ -139,15 +140,15 @@ def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
 Config.load('config.toml')
 scenario_cfg = Config.scenarios['scenario']
 
-# Run of the Taipy Core service
+# Start Taipy Core service
 tp.Core().run()
 
-# Create a scenario for "Fantasy" genre
+# Create a scenario
 scenario = tp.create_scenario(scenario_cfg)
 
 
 # TAIPY GUI
-#Let's add Taipy GUI to our Taipy Core for a full application
+# Let's add Taipy GUI to our Taipy Core for a full application
 
 # Callback definition - submits scenario with genre selection
 def modify_genre(state):
@@ -194,7 +195,7 @@ Gui(page=my_page).run(port=5002)
 <br>
 
 ### Taipy CORE - a walk on the code side
-<div align="left">If you prefer coding your configurations, Taipy's got you 🫵 </div>   
+<div align="left">If you prefer coding your configurations instead of using Taipy Studio, Taipy's got you 🫵 </div>   
 
 *<div align="left">Check out the Movie Genre Filter scenario creation with this [Demo](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) </div>*
 
