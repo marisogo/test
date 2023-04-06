@@ -36,7 +36,7 @@
     
 | TAIPY GUI - the frond end  | TAIPY Core - the back end |
 | --------  | -------- |
-|<img src="https://github.com/marisogo/test/blob/main/gui_intro_readme.gif" alt="Taipy Logo"  width="400" height="300"/> | <img src="https://github.com/marisogo/test/blob/main/core_intro_readme.gif" alt="Taipy Logo"  width="400" height="300"/>
+|<img src="https://github.com/marisogo/test/blob/main/gui_intro_readme.gif" alt="Taipy Logo"  width="350" height="300"/> | <img src="https://github.com/marisogo/test/blob/main/core_intro_readme.gif" alt="Taipy Logo"  width="350" height="300"/>
 
     
 </div> 
@@ -110,6 +110,7 @@ def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
 *You can use the Taipy Studio extension in VSCode to configure your pipeline easily* 
 
 <div align="center"><img src="https://github.com/marisogo/test/blob/main/studio_readme.gif" width=600 height=400 alt="GUI demo"></img></div> 
+
 *Your configuration is automatically saved as a toml file* 
 
 <br>
