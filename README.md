@@ -38,7 +38,7 @@
 <br>
  <div align="center">
     
-| TAIPY GUI - the frond end  | TAIPY Core - the back end |
+| TAIPY GUI - the frond-end  | TAIPY Core - the back-end |
 | --------  | -------- |
 |<img src="https://github.com/marisogo/test/blob/main/gui_intro_readme.gif" alt="Taipy Logo"  width="350" height="300"/> | <img src="https://github.com/marisogo/test/blob/main/core_intro_readme.gif" alt="Taipy Logo"  width="350" height="300"/>
 
@@ -105,7 +105,7 @@ def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
     return filtered_data
 ```
 
-*This is the execution graph of the scenario we will be implemeting*
+*This is the execution graph of the scenario we will be implementing*
 
 <div align="center"><img src="https://github.com/marisogo/test/blob/main/readme_exec_g.png" alt="Taipy Logo"  width="400" height="200"/></div> 
 
@@ -126,7 +126,27 @@ and [Getting Started](https://docs.taipy.io/en/latest/getting_started/getting-st
 
 <br>
 <br>
+<br>
+<br>
 
+### Taipy CORE - a walk on the code side
+<div align="left">If you prefer coding your configurations instead of using Taipy Studio, Taipy's got you 🫵 </div>   
+
+*<div align="left">Check out the Movie Genre Filter scenario creation with this [Demo](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) </div>*
+
+<br>
+<br>
+<br>
+
+### <div align="center">*Gimme Core*</div>
+*<div align="center">Check out our [Getting Started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) and [Documentation](https://docs.taipy.io/en/latest/manuals/core/) </div>*
+
+<br>
+<br>
+<br>
+
+
+## Front-end ➕ Back-end
 *Now, let's load this configuration and add a GUI on top for a 🎉FULL APPLICATION🎉*
 ```python
 import taipy as tp
@@ -199,19 +219,6 @@ Gui(page=my_page).run(port=5002)
 <br>
 <br>
 
-### Taipy CORE - a walk on the code side
-<div align="left">If you prefer coding your configurations instead of using Taipy Studio, Taipy's got you 🫵 </div>   
-
-*<div align="left">Check out the Movie Genre Filter scenario creation with this [Demo](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) </div>*
-
-<br>
-
-### <div align="center">*Gimme Core*</div>
-*<div align="center">Check out our [Getting Started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) and [Documentation](https://docs.taipy.io/en/latest/manuals/core/) </div>*
-
-<br>
-<br>
-<br>
 
 ## Contributing ⚒⚒
 
