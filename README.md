@@ -16,7 +16,6 @@
     <a href="https://github.com/Avaiga/taipy/actions/workflows/tests.yml" alt="tests">
         <img alt="PyPI" src="https://github.com/Avaiga/taipy/actions/workflows/tests.yml/badge.svg"></a>
 
-    [![PyPI](https://img.shields.io/pypi/v/taipy.svg?label=pip&logo=PyPI&logoColor=white)](https://pypi.org/project/taipy)
 
 <br>
 
