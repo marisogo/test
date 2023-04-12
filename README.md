@@ -5,13 +5,18 @@
 <br>
 #  Welcome to Taipy 
 <p align="left">
-    <a href="https://pypi.python.org/pypi/taipy/" alt="PyPI version">
-        <img alt="PyPI" src="https://img.shields.io/pypi/v/taipy?color=ff462b&labelColor=283282"></a>
+    <a href="https://pypi.python.org/pypi/taipy/" alt="Python version">
+        <img alt="PyPI" src="https://img.shields.io/pypi/v/taipy.svg?label=pip&logo=PyPI&color=ff462b&labelColor=283282"></a>
+    <a href="https://pypi.org/project/taipy" alt="pip version">
+        <img alt="PyPI" src="https://img.shields.io/pypi/pyversions/taipy?color=ff462b&labelColor=283282"></a>
     <a href="https://www.youtube.com/@taipy8009" alt="YouTube">
         <img src="https://img.shields.io/badge/youtube-click_to_watch_videos-red.svg?color=ff462b&labelColor=283282&logo=youtube" /></a>
      <a href="https://twitter.com/Taipy_io" alt="Twitter">
         <img src="https://img.shields.io/badge/twitter-click_for_tweets-red.svg?color=ff462b&labelColor=283282&logo=twitter" /></a>
-</p> 
+    <a href="https://github.com/Avaiga/taipy/actions/workflows/tests.yml" alt="tests">
+        <img alt="PyPI" src="https://github.com/Avaiga/taipy/actions/workflows/tests.yml/badge.svg"></a>
+
+    [![PyPI](https://img.shields.io/pypi/v/taipy.svg?label=pip&logo=PyPI&logoColor=white)](https://pypi.org/project/taipy)
 
 <br>
 
