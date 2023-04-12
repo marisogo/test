@@ -97,7 +97,7 @@ Gui(page=my_page).run()
 #### <div align="center">Let's create a back-end execution, also called scenario using Taipy Core. Our scenario will filter movie data based on the genre you choose. This scenario will be submitted (i.e., executed) each time the genre selection changes and output the seven most popular movies of that genre. </div>  
 <br>
 
-*Here is our filter function: it's a standard python function that will constitute our unique task in the scenario*
+*Here is our filter function: it's a standard Python function that will constitute our unique task in the scenario*
 ```python
 def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
     filtered_dataset = initial_dataset[initial_dataset['genres'].str.contains(selected_genre)]
