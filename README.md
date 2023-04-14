@@ -80,7 +80,7 @@ Gui(page=my_page).run()
 ```
 *RUN*🏃🏽‍♀️  
 
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/gui_app_readme.gif" width=600 height=400 alt="GUI demo"></img></div>
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/readme_gui_app.gif" width=600 height=400 alt="GUI demo"></img></div>
 <div align="center">🎊 TADA! 🎊</div>  
 
 <br>
@@ -210,7 +210,7 @@ Gui(page=my_page).run(port=5002)
 
 <div align="center">🎊TADA!🎊</div>  
 <br>
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/app_readme.gif" width=700 height=400 alt="GUI demo"></img></div> 
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/readme_app.gif" width=700 height=400 alt="GUI demo"></img></div> 
 
 <br>
 
