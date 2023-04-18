@@ -131,7 +131,7 @@ def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
 ### Taipy CORE - a walk on the code side
 <div align="left">If you prefer coding your configurations instead of using Taipy Studio, Taipy's got you 🫵 </div>   
 
-*<div align="left">Check out the Movie Genre Filter scenario creation with this [Demo](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) </div>*
+*<div align="left">Check out the Movie Genre Filter scenario creation with this [Demo](https://www.taipy.io/project/movie-genre-selector/) </div>*
 
 <br>
 <br>
