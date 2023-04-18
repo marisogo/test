@@ -79,9 +79,9 @@ excitement=100
 Gui(page=my_page).run()
 ```
 *RUN*🏃🏽‍♀️  
-
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/readme_gui_app.gif" width=600 height=400 alt="GUI demo"></img></div>
 <div align="center">🎊 TADA! 🎊</div>  
+<br>
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/readme_gui_app.gif" width=600 height=400 alt="GUI demo"></img></div>  
 
 <br>
 <br>
@@ -121,8 +121,7 @@ def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
 <br>
 
 ### <div align="center">*Want to be Studio-us?*</div>
-*<div align="center">Check out our [Documentation](https://docs.taipy.io/en/latest/manuals/studio/)
-and [Getting Started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) </div>*
+*<div align="center">Check out our [Getting Started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) and [Documentation](https://docs.taipy.io/en/latest/manuals/studio/) </div>*
 
 <br>
 <br>
