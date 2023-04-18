@@ -5,9 +5,9 @@
 <br>
 #  Welcome to Taipy 
 <p align="left">
-    <a href="https://pypi.python.org/pypi/taipy/" alt="Python version">
+    <a href="https://pypi.python.org/pypi/taipy/" alt="Taipy version">
         <img alt="PyPI" src="https://img.shields.io/pypi/v/taipy.svg?label=pip&logo=PyPI&color=ff462b&labelColor=283282"></a>
-    <a href="https://pypi.org/project/taipy" alt="pip version">
+    <a href="https://pypi.org/project/taipy" alt="Python version">
         <img alt="PyPI" src="https://img.shields.io/pypi/pyversions/taipy?color=ff462b&labelColor=283282"></a>
     <a href="https://www.youtube.com/@taipy8009" alt="YouTube">
         <img src="https://img.shields.io/badge/youtube-click_to_watch_videos-red.svg?color=ff462b&labelColor=283282&logo=youtube" /></a>
