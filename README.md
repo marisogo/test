@@ -1,7 +1,7 @@
 <br>
 <br>
 
-<img align="left" src="https://github.com/marisogo/test/blob/main/logo_borders.png" alt="Taipy Logo" width="150" height="150" ></img>
+<img align="left" src="https://github.com/marisogo/test/blob/main/readme_img/readme_logo.png" alt="Taipy Logo" width="150" height="150" ></img>
 <br>
 #  Welcome to Taipy 
 <p align="left">
@@ -40,7 +40,7 @@
     
 | TAIPY GUI - the frond-end  | TAIPY Core - the back-end |
 | --------  | -------- |
-|<img src="https://github.com/marisogo/test/blob/main/gui_intro_readme.gif" alt="Taipy Logo"  width="350" height="300"/> | <img src="https://github.com/marisogo/test/blob/main/core_intro_readme.gif" alt="Taipy Logo"  width="350" height="300"/>
+|<img src="https://github.com/marisogo/test/blob/main/readme_img/readme_gui_intro.gif" alt="Taipy Logo"  width="350" height="300"/> | <img src="https://github.com/marisogo/test/blob/main/readme_img/readme_core_intro.gif" alt="Taipy Logo"  width="350" height="300"/>
 
     
 </div> 
@@ -81,7 +81,7 @@ Gui(page=my_page).run()
 *RUN*🏃🏽‍♀️  
 <div align="center">🎊 TADA! 🎊</div>  
 <br>
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/readme_gui_app.gif" width=600 height=400 alt="GUI demo"></img></div>  
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/readme_img/readme_gui_app.gif" width=600 height=400 alt="GUI demo"></img></div>  
 
 <br>
 <br>
@@ -107,13 +107,13 @@ def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
 
 *This is the execution graph of the scenario we will be implementing*
 
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/readme_exec_g.png" alt="Taipy Logo"  width="400" height="200"/></div> 
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/readme_img/readme_exec_g.png" alt="Taipy Logo"  width="400" height="300"/></div> 
 
 
 ### Taipy Studio - The easy peasy way
 *You can use the Taipy Studio extension in VSCode to configure your pipeline easily* 
 
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/studio_readme.gif" width=600 height=400 alt="GUI demo"></img></div> 
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/readme_img/readme_studio.gif" width=600 height=400 alt="GUI demo"></img></div> 
 
 *Your configuration is automatically saved as a toml file* 
 
@@ -209,7 +209,7 @@ Gui(page=my_page).run(port=5002)
 
 <div align="center">🎊TADA!🎊</div>  
 <br>
-<div align="center"><img src="https://github.com/marisogo/test/blob/main/readme_app.gif" width=700 height=500 alt="GUI demo"></img></div> 
+<div align="center"><img src="https://github.com/marisogo/test/blob/main/readme_img/readme_app.gif" width=700 height=500 alt="GUI demo"></img></div> 
 
 <br>
 
