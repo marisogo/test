@@ -88,7 +88,7 @@ Gui(page=excitement_page).run()
 <br>
 <br>
 
-## Back-End ⚙️
+## Taipy Back-End ⚙️
 
 **<div align="left">Let's create a back-end execution, also called *scenario* using Taipy Core. Our scenario will filter movie data based on the genre you choose. This scenario will be submitted (i.e., executed) each time the genre selection changes and output the seven most popular movies of that genre. </div>**
 
@@ -220,7 +220,7 @@ Gui(page=my_page).run()
 ## Taipy Cloud ☁️
 Taipy greatly eases your web application deployment. It provides the most suitable cloud tool to host, deploy, and share your Taipy applications easily. In addition, this platform provides the ability to manage, store, and maintain the various states of your backend.
 
-Click [here]('https://www.taipy.io/taipy-cloud/') to get started for free
+***<div align="center"> Click [here](https://www.taipy.io/taipy-cloud/) to get started for free </div>***
 
 <br>
 <br>
