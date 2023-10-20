@@ -110,12 +110,12 @@ def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
 
 *This is the execution graph of the scenario we are implementing*
 
-<div align="center"><img src="readme_img/diag_2.png" alt="Taipy Core Graph"  width="50%"/></div>
+<div align="center"><img src="readme_img/diag_2.png" alt="Taipy Core Graph"  width="40%"/></div>
 
 ### Taipy Studio - The easy-peasy way
 *You can use the Taipy Studio extension in VSCode to configure your sequence with no code*
 
-<div align="center"><img src="readme_img/readme_studio.gif" width="80%" alt="GUI demo"></img></div>
+<div align="center"><img src="readme_img/readme_demo_studio.gif" width="60%" alt="GUI demo"></img></div>
 
 *Your configuration is automatically saved as a TOML file*
 
@@ -154,57 +154,65 @@ import taipy as tp
 import pandas as pd
 from taipy import Config, Scope, Gui
 
-# TAIPY Back-end
 
-# Filtering function - task
-def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
+# TAIPY Back-end
+=======
+# Create a Taipy App that will output the 7 best movies for a genre
+
+
+# Filter function for Task
+def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
     filtered_dataset = initial_dataset[initial_dataset['genres'].str.contains(selected_genre)]
     filtered_data = filtered_dataset.nlargest(7, 'Popularity %')
     return filtered_data
+
+# Taipy- Back-End definition
 
 # Load the configuration made with Taipy Studio
 Config.load('config.toml')
 scenario_cfg = Config.scenarios['scenario']
 
-# Start Taipy Back-End service
+# Run of the Taipy Back-End service
 tp.Core().run()
 
-# Create a scenario
+# Creation of my scenario
 scenario = tp.create_scenario(scenario_cfg)
 
 
-# TAIPY Front-End
-# Let's add a froent-end to our back-end for a full application
+# Taipy -Front-End definition
 
-# Callback definition - submits scenario with genre selection
-def on_genre_selected(state):
+# Callback definition
+def modify_df(state):
     scenario.selected_genre_node.write(state.selected_genre)
     tp.submit(scenario)
-    state.df = scenario.filtered_data.read()
+    state.df = scenario.filtered_data.read()    
 
 # Get list of genres
-genres = [
-    'Action', 'Adventure', 'Animation', 'Children', 'Comedy', 'Fantasy', 'IMAX'
-    'Romance','Sci-FI', 'Western', 'Crime', 'Mystery', 'Drama', 'Horror', 'Thriller', 'Film-Noir','War', 'Musical', 'Documentary'
-    ]
+list_genres = ['Action', 'Adventure', 'Animation', 'Children', 'Comedy', 'Fantasy', 'IMAX', 'Romance',
+               'Sci-FI', 'Western', 'Crime', 'Mystery', 'Drama', 'Horror', 'Thriller', 'Film-Noir',
+               'War', 'Musical', 'Documentary']
 
 # Initialization of variables
 df = pd.DataFrame(columns=['Title', 'Popularity %'])
-selected_genre = None
+selected_genre = 'Action'
 
-# User interface definition
-my_page = """
+## Set initial value to Action
+def on_init(state):
+    modify_df(state)
+
+# movie_genre_app
+movie_genre_app = """
 # Film recommendation
 
 ## Choose your favorite genre
-<|{selected_genre}|selector|lov={genres}|on_change=on_genre_selected|dropdown|>
+<|{selected_genre}|selector|lov={list_genres}|on_change=modify_df|dropdown|>
 
-## Here are the top seven picks by popularity
+## Here are the top 7 picks
 <|{df}|chart|x=Title|y=Popularity %|type=bar|title=Film Popularity|>
 """
 
-Gui(page=my_page).run()
-
+# run the app
+Gui(page=movie_genre_app).run()
 ```
 *RUN*🏃🏽‍♀️
 
