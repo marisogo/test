@@ -17,9 +17,9 @@
 
 <br>
 
-###  <div align="left"> Your Web Application Builder. Pure Python. 
-###  <div align="left"> How? Taipy pops out as a 360° platform to build production-ready web applications 
-### <div align="center"> Open Source, 100% Python</div>
+###  <div align="left"> Your Web Application Builder. Pure Python & Open-Source. <div align="left"> How? Taipy pops out as a 360° platform to build production-ready web applications 
+
+
 
 <br>
 
