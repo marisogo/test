@@ -113,13 +113,11 @@ def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
 
 *This is the execution graph of the scenario we are implementing*
 
-<div align="center"><img src="readme_img/readme_exec.png" alt="Taipy Core Graph"  width="60%"/></div>
+<div align="center"><img src="readme_img/readme_exec_g.png" alt="Taipy Core Graph"  width="80%"/></div>
 
 
 ### Taipy Studio - The easy peasy way
 *You can use the Taipy Studio extension in VSCode to configure your sequence with no code*
-
-<div align="center"><img src="readme_img/readme_exec_g.png" alt="Taipy Core Graph"  width="60%"/></div>
 
 *Your configuration is automatically saved as a TOML file*
 
