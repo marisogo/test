@@ -18,7 +18,7 @@
 <br>
 
 ###  <div align="left">Turns Data and AI algorithms into full web applications in no time.
-###  How? Taipy GUI with Taipy Core pops out as a 360° platform to build production-ready web applications</div>
+###  How? Taipy pops out as a 360° platform to build production-ready web applications</div>
 
 
 
@@ -36,9 +36,9 @@
 <br>
  <div align="center">
 
-| TAIPY GUI - the frond-end  | TAIPY Core - the back-end |
+| TAIPY - the frond-end  | TAIPY - the back-end |
 | --------  | -------- |
-|<img src="readme_img/readme_gui_intro.gif" alt="Taipy GUI Animation"  width="100%"/> | <img src="readme_img/readme_core_intro.gif" alt="Taipy Core Animation"  width="100%"/>
+|<img src="readme_img/readme_gui_intro.gif" alt="Taipy FE Animation"  width="100%"/> | <img src="readme_img/readme_core_intro.gif" alt="Taipy BE Animation"  width="100%"/>
 
 
 </div>
@@ -66,14 +66,14 @@ Join our [Discord](https://discord.gg/XcFhrJZru3) to give us feedback, share you
 
 ## Ready, Set, GUI
 
-### Tiny Taipy GUI Demo
+### Tiny Taipy Front-End Demo
 
 ```python
 from taipy import Gui
 
 excitement_page = """
 # Welcome to Taipy
-## Getting started with Taipy GUI
+## Getting started with Taipy
 ### How excited are you to try Taipy?
 
 <|{excitement}|slider|min=1|max=100|>
@@ -134,7 +134,7 @@ def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
 <br>
 <br>
 
-### Taipy Core - a walk on the code side
+### Taipy Back-End - a walk on the code side
 <div align="left">For more advanced use cases or if you prefer coding your configurations instead of using Taipy Studio, Taipy has your back! </div>
 
 *<div align="left">Check out the movie genre demo scenario creation with this [Demo](https://www.taipy.io/project/movie-genre-selector/) </div>*
@@ -170,15 +170,15 @@ def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
 Config.load('config.toml')
 scenario_cfg = Config.scenarios['scenario']
 
-# Start Taipy Core service
+# Start Taipy Back-End service
 tp.Core().run()
 
 # Create a scenario
 scenario = tp.create_scenario(scenario_cfg)
 
 
-# TAIPY GUI
-# Let's add Taipy GUI to our Taipy Core for a full application
+# TAIPY Front-End
+# Let's add a froent-end to our back-end for a full application
 
 # Callback definition - submits scenario with genre selection
 def on_genre_selected(state):
@@ -222,9 +222,13 @@ Gui(page=my_page).run()
 
 <br>
 
-<br>
-<br>
+## Taipy Cloud ☁️
+Taipy greatly eases your web application deployment. It provides the most suitable cloud tool to host, deploy, and share your Taipy applications easily. In addition, this platform provides the ability to manage, store, and maintain the various states of your backend.
 
+Click [here]('https://www.taipy.io/taipy-cloud/') to get started for free
+
+<br>
+<br>
 
 ## Contributing ⚒⚒
 
