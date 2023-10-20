@@ -17,19 +17,9 @@
 
 <br>
 
-###  <div align="left">Turns Data and AI algorithms into full web applications in no time.
-###  How? Taipy pops out as a 360° platform to build production-ready web applications</div>
+###  <div align="left">Turns Data and AI algorithms into full web applications in no time. How? Taipy pops out as a 360° platform to build production-ready web applications 
+### <div align="center"> Open Source, 100% Python</div>
 
-
-
-<br>
-<br>
-
-###  <div align="left">*Open Source, 100% Python*</div>
-
-
-<br>
-<br>
 <br>
 
 #  <div align="center"> 📊 We make both ends meet ⚙️ </div>
@@ -66,7 +56,7 @@ Join our [Discord](https://discord.gg/XcFhrJZru3) to give us feedback, share you
 
 ## Ready, Set, GUI
 
-### Tiny Taipy Front-End Demo
+**Tiny Taipy Front-End Demo**
 
 ```python
 from taipy import Gui
@@ -92,7 +82,7 @@ Gui(page=excitement_page).run()
 <br>
 <br>
 
-### <div align="center">*Find out more*</div>
+***<div align="center">Find out more</div>***
 *<div align="center">Check out our [Getting Started](https://docs.taipy.io/en/latest/getting_started/getting-started-gui/) and [Documentation](https://docs.taipy.io/en/latest/manuals/gui/)</div>*
 
 <br>
@@ -100,7 +90,13 @@ Gui(page=excitement_page).run()
 
 ## Back-End ⚙️
 
-#### <div align="center">Let's create a back-end execution, also called *scenario* using Taipy Core. Our scenario will filter movie data based on the genre you choose. This scenario will be submitted (i.e., executed) each time the genre selection changes and output the seven most popular movies of that genre. </div>
+**<div align="left">Let's create a back-end execution, also called *scenario* using Taipy Core. Our scenario will filter movie data based on the genre you choose. This scenario will be submitted (i.e., executed) each time the genre selection changes and output the seven most popular movies of that genre. </div>**
+
+<br>
+
+<div align="center"> ⚠️ Here, the backend involves the execution of a very simple pipeline (made of a single task). Note that Taipy is designed to build much more complex pipelines 🚀 (with many tasks!) </div>
+
+<br>
 <br>
 
 *Here is our filter function: a standard Python function that is used by the unique task in the scenario*
@@ -115,16 +111,17 @@ def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
 
 <div align="center"><img src="readme_img/readme_exec_g.png" alt="Taipy Core Graph"  width="80%"/></div>
 
-
 ### Taipy Studio - The easy peasy way
 *You can use the Taipy Studio extension in VSCode to configure your sequence with no code*
+
+<div align="center"><img src="readme_img/readme_studio.gif" width="80%" alt="GUI demo"></img></div>
 
 *Your configuration is automatically saved as a TOML file*
 
 <br>
 <br>
 
-### <div align="center">*Find out more*</div>
+***<div align="center">Find out more</div>***
 *<div align="center">Check out our [Getting Started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) and [Documentation](https://docs.taipy.io/en/latest/manuals/studio/) </div>*
 
 <br>
@@ -141,7 +138,7 @@ def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
 <br>
 <br>
 
-### <div align="center">*Find out more*</div>
+***<div align="center">Find out more</div>***
 *<div align="center">Check out our [Getting Started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) and [Documentation](https://docs.taipy.io/en/latest/manuals/core/) </div>*
 
 <br>
