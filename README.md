@@ -153,10 +153,12 @@ import taipy as tp
 import pandas as pd
 from taipy import Config, Scope, Gui
 
-# TAIPY Core
+# Create a Taipy App that will output the 7 best movies for a genre
 
-# Filtering function - task
-def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
+# Taipy- Back-End definition
+
+# Filter function for Task
+def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
     filtered_dataset = initial_dataset[initial_dataset['genres'].str.contains(selected_genre)]
     filtered_data = filtered_dataset.nlargest(7, 'Popularity %')
     return filtered_data
@@ -165,45 +167,48 @@ def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
 Config.load('config.toml')
 scenario_cfg = Config.scenarios['scenario']
 
-# Start Taipy Back-End service
+
+# Run of the Taipy Back-End service
 tp.Core().run()
 
-# Create a scenario
+# Creation of my scenario
 scenario = tp.create_scenario(scenario_cfg)
 
 
-# TAIPY Front-End
-# Let's add a froent-end to our back-end for a full application
+# Taipy -Front-End definition
 
-# Callback definition - submits scenario with genre selection
-def on_genre_selected(state):
+# Callback definition
+def modify_df(state):
     scenario.selected_genre_node.write(state.selected_genre)
     tp.submit(scenario)
-    state.df = scenario.filtered_data.read()
+    state.df = scenario.filtered_data.read()    
 
 # Get list of genres
-genres = [
-    'Action', 'Adventure', 'Animation', 'Children', 'Comedy', 'Fantasy', 'IMAX'
-    'Romance','Sci-FI', 'Western', 'Crime', 'Mystery', 'Drama', 'Horror', 'Thriller', 'Film-Noir','War', 'Musical', 'Documentary'
-    ]
+list_genres = ['Action', 'Adventure', 'Animation', 'Children', 'Comedy', 'Fantasy', 'IMAX', 'Romance',
+               'Sci-FI', 'Western', 'Crime', 'Mystery', 'Drama', 'Horror', 'Thriller', 'Film-Noir',
+               'War', 'Musical', 'Documentary']
 
 # Initialization of variables
 df = pd.DataFrame(columns=['Title', 'Popularity %'])
 selected_genre = None
 
-# User interface definition
-my_page = """
+## Set initial valude to Action
+def on_init(state):
+    modify_df(state)
+
+# movie_genre_app
+movie_genre_app = """
 # Film recommendation
 
 ## Choose your favorite genre
-<|{selected_genre}|selector|lov={genres}|on_change=on_genre_selected|dropdown|>
+<|{selected_genre}|selector|lov={list_genres}|on_change=modify_df|dropdown|>
 
-## Here are the top seven picks by popularity
+## Here are the top 7 picks
 <|{df}|chart|x=Title|y=Popularity %|type=bar|title=Film Popularity|>
 """
 
-Gui(page=my_page).run()
-
+# run the app
+Gui(page=movie_genre_app).run()
 ```
 *RUN*🏃🏽‍♀️
 
