@@ -226,8 +226,11 @@ Gui(page=movie_genre_app).run()
 
 <br>
 
-## Taipy Cloud - Elevate your Taipy application to the cloud ☁️
+## Elevate your application with  ☁️Taipy Cloud☁️
 Taipy greatly eases your web application deployment. It provides the most suitable cloud tool to host, deploy, and share your Taipy applications easily. In addition, this platform provides the ability to manage, store, and maintain the various states of your backend.
+
+<br>
+<br>
 
 ***<div align="center"> Click [here](https://www.taipy.io/taipy-cloud/) to get started for free </div>***
 
