@@ -114,7 +114,7 @@ def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
 ### Taipy Studio - The easy peasy way
 *You can use the Taipy Studio extension in VSCode to configure your sequence with no code*
 
-<div align="center"><img src="readme_img/readme_studio.gif" width="80%" alt="GUI demo"></img></div>
+<div align="center"><img src="readme_img/readme_demo_studio.gif" width="80%" alt="GUI demo"></img></div>
 
 *Your configuration is automatically saved as a TOML file*
 
