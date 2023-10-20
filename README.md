@@ -17,7 +17,8 @@
 
 <br>
 
-###  <div align="left">Turns Data and AI algorithms into full web applications in no time. How? Taipy pops out as a 360° platform to build production-ready web applications 
+###  <div align="left"> Your Web Application Builder. Pure Python. 
+###  <div align="left"> How? Taipy pops out as a 360° platform to build production-ready web applications 
 ### <div align="center"> Open Source, 100% Python</div>
 
 <br>
@@ -26,9 +27,9 @@
 <br>
  <div align="center">
 
-| TAIPY - the frond-end  | TAIPY - the back-end |
-| --------  | -------- |
-|<img src="readme_img/readme_gui_intro.gif" alt="Taipy FE Animation"  width="100%"/> | <img src="readme_img/readme_core_intro.gif" alt="Taipy BE Animation"  width="100%"/>
+| TAIPY - the frond-end  | TAIPY - the back-end | Taipy Cloud - the host |
+| --------  | -------- |-------- |
+|<img src="readme_img/readme_gui_intro.gif" alt="Taipy FE Animation"  width="100%"/> | <img src="readme_img/readme_core_intro.gif" alt="Taipy BE Animation"  width="100%"/> | <img src="readme_img/readme_taipy_cloud.gif" alt="Taipy BE Animation"  width="100%"/>
 
 
 </div>
@@ -90,7 +91,7 @@ Gui(page=excitement_page).run()
 
 ## Taipy Back-End ⚙️
 
-**<div align="left">Let's create a back-end execution, also called *scenario* using Taipy Core. Our scenario will filter movie data based on the genre you choose. This scenario will be submitted (i.e., executed) each time the genre selection changes and output the seven most popular movies of that genre. </div>**
+**<div align="left">Let's create a back-end execution, also called *scenario*, using Taipy backend. Our scenario will filter movie data based on the genre you choose. This scenario will be submitted (i.e., executed) each time the genre selection changes and output the seven most popular movies of that genre. </div>**
 
 <br>
 
@@ -111,7 +112,7 @@ def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
 
 <div align="center"><img src="readme_img/diag_2.png" alt="Taipy Core Graph"  width="40%"/></div>
 
-### Taipy Studio - The easy peasy way
+### Taipy Studio - The easy-peasy way
 *You can use the Taipy Studio extension in VSCode to configure your sequence with no code*
 
 <div align="center"><img src="readme_img/readme_demo_studio.gif" width="60%" alt="GUI demo"></img></div>
@@ -153,7 +154,11 @@ import taipy as tp
 import pandas as pd
 from taipy import Config, Scope, Gui
 
+
+# TAIPY Back-end
+=======
 # Create a Taipy App that will output the 7 best movies for a genre
+
 
 # Filter function for Task
 def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
@@ -221,7 +226,7 @@ Gui(page=movie_genre_app).run()
 
 <br>
 
-## Taipy Cloud ☁️
+## Taipy Cloud - Elevate your Taipy application to the cloud ☁️
 Taipy greatly eases your web application deployment. It provides the most suitable cloud tool to host, deploy, and share your Taipy applications easily. In addition, this platform provides the ability to manage, store, and maintain the various states of your backend.
 
 ***<div align="center"> Click [here](https://www.taipy.io/taipy-cloud/) to get started for free </div>***
