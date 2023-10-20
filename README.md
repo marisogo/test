@@ -155,18 +155,17 @@ from taipy import Config, Scope, Gui
 
 # Create a Taipy App that will output the 7 best movies for a genre
 
-# Taipy- Back-End definition
-
 # Filter function for Task
 def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
     filtered_dataset = initial_dataset[initial_dataset['genres'].str.contains(selected_genre)]
     filtered_data = filtered_dataset.nlargest(7, 'Popularity %')
     return filtered_data
 
+# Taipy- Back-End definition
+
 # Load the configuration made with Taipy Studio
 Config.load('config.toml')
 scenario_cfg = Config.scenarios['scenario']
-
 
 # Run of the Taipy Back-End service
 tp.Core().run()
@@ -190,9 +189,9 @@ list_genres = ['Action', 'Adventure', 'Animation', 'Children', 'Comedy', 'Fantas
 
 # Initialization of variables
 df = pd.DataFrame(columns=['Title', 'Popularity %'])
-selected_genre = None
+selected_genre = 'Action'
 
-## Set initial valude to Action
+## Set initial value to Action
 def on_init(state):
     modify_df(state)
 
