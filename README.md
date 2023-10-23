@@ -229,7 +229,7 @@ Gui(page=movie_genre_app).run()
 ## ☁️Taipy Cloud☁️
 With Taipy Cloud, you can deploy your Taipy application in a *few clicks* and *for free*!
 
-<div align="center"><img src="readme_img/readme_cloud.gif" alt="Taipy Logo" width="60%" ></img></div>
+<div align="center"><img src="readme_img/readme_cloud_demo.gif" alt="Taipy Logo" width="60%" ></img></div>
 
 <br>
 <br>
