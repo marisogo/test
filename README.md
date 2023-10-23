@@ -226,10 +226,10 @@ Gui(page=movie_genre_app).run()
 
 <br>
 
-## Elevate your application with  ☁️Taipy Cloud☁️
-Taipy greatly eases your web application deployment. It provides the most suitable cloud tool to host, deploy, and share your Taipy applications easily. In addition, this platform provides the ability to manage, store, and maintain the various states of your backend.
+## ☁️Taipy Cloud☁️
+With Taipy Cloud, you can deploy your Taipy application in a *few clicks* and *for free*!
 
-<div align="center"><img src="readme_img/readme_cloud.gif" alt="Taipy Logo" width="50%" ></img></div>
+<div align="center"><img src="readme_img/readme_cloud.gif" alt="Taipy Logo" width="60%" ></img></div>
 
 <br>
 <br>
