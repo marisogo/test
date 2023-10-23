@@ -27,9 +27,9 @@
 <br>
  <div align="center">
 
-| TAIPY - the frond-end  | TAIPY - the back-end | Taipy Cloud - the host |
-| --------  | -------- |-------- |
-|<img src="readme_img/readme_gui_intro.gif" alt="Taipy FE Animation"  width="100%"/> | <img src="readme_img/readme_core_intro.gif" alt="Taipy BE Animation"  width="100%"/> | <img src="readme_img/readme_taipy_cloud.gif" alt="Taipy BE Animation"  width="100%"/>
+| TAIPY - the frond-end  | TAIPY - the back-end |
+| --------  | -------- |
+|<img src="readme_img/readme_gui_intro.gif" alt="Taipy FE Animation"  width="100%"/> | <img src="readme_img/readme_core_intro.gif" alt="Taipy BE Animation"  width="100%"/> | 
 
 
 </div>
