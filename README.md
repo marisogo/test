@@ -3,7 +3,7 @@
 
 <img align="left" src="readme_img/readme_logo.png" alt="Taipy Logo" width="20%" ></img>
 <br>
-#  Welcome to Taipy
+#  Welcome to Taipy - Your Web Application Builder
 <p align="left">
     <a href="https://pypi.python.org/pypi/taipy/" alt="Taipy version">
         <img alt="PyPI" src="https://img.shields.io/pypi/v/taipy.svg?label=pip&logo=PyPI&color=ff462b&labelColor=283282"></a>
@@ -17,7 +17,7 @@
 
 <br>
 
-###  <div align="left"> Your Web Application Builder. Pure Python & Open-Source. <div align="left"> How? Taipy pops out as a 360° platform to build production-ready web applications 
+###  <div align="left">Pure Python & Open-Source. <div align="left"> How? Taipy pops out as a 360° platform to build production-ready web applications.
 
 
 
