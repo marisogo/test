@@ -91,7 +91,8 @@ Gui(page=excitement_page).run()
 
 ## Taipy Back-End ⚙️
 
-**<div align="left">Let's create a back-end execution, also called *scenario*, using Taipy backend. Our scenario will filter movie data based on the genre you choose. This scenario will be submitted (i.e., executed) each time the genre selection changes and output the seven most popular movies of that genre. </div>**
+**<div align="left">Let's create a back-end execution, also called *scenario* in Taipy. Our scenario will filter movie data based on the genre you choose. This scenario will be submitted (i.e., executed) each time the genre selection changes and output the seven most popular movies of that genre. </div>**
+
 
 <br>
 
