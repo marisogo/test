@@ -14,12 +14,9 @@
      <a href="https://twitter.com/Taipy_io" alt="Twitter">
         <img src="https://img.shields.io/badge/twitter-click_for_tweets-red.svg?color=ff462b&labelColor=283282&logo=twitter" /></a>
 
-
 <br>
 
 ###  <div align="left">Pure Python & Open-Source. <div align="left"> How? Taipy pops out as a 360° platform to build production-ready web applications.
-
-
 
 <br>
 
@@ -78,13 +75,13 @@ Gui(page=excitement_page).run()
 *RUN*🏃🏽‍♀️
 <div align="center">🎊 TA-DA! 🎊</div>
 <br>
-<div align="center"><img src="readme_img/readme_fe_app.gif" width="50%" alt="GUI demo"></img></div>
+<div align="center"><img src="readme_img/readme_fe_app.gif" width="50%" alt="FE demo"></img></div>
 
 <br>
 <br>
 
 ***<div align="center">Find out more</div>***
-*<div align="center">Check out our [Getting Started](https://docs.taipy.io/en/latest/getting_started/getting-started-gui/) and [Documentation](https://docs.taipy.io/en/latest/manuals/gui/)</div>*
+*<div align="center">Check out our [Getting Started](https://docs.taipy.io/en/latest/getting_started/) and [Documentation](https://docs.taipy.io/en/latest/manuals/gui/)</div>*
 
 <br>
 <br>
@@ -111,12 +108,12 @@ def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
 
 *This is the execution graph of the scenario we are implementing*
 
-<div align="center"><img src="readme_img/diag_2.png" alt="Taipy Core Graph"  width="40%"/></div>
+<div align="center"><img src="readme_img/diag_2.png" alt="Taipy BE Graph"  width="40%"/></div>
 
 ### Taipy Studio - The easy-peasy way
 *You can use the Taipy Studio extension in VSCode to configure your sequence with no code*
 
-<div align="center"><img src="readme_img/readme_demo_studio.gif" width="60%" alt="GUI demo"></img></div>
+<div align="center"><img src="readme_img/readme_demo_studio.gif" width="60%" alt="demo BE"></img></div>
 
 *Your configuration is automatically saved as a TOML file*
 
@@ -124,7 +121,7 @@ def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
 <br>
 
 ***<div align="center">Find out more</div>***
-*<div align="center">Check out our [Getting Started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) and [Documentation](https://docs.taipy.io/en/latest/manuals/studio/) </div>*
+*<div align="center">Check out our [Documentation](https://docs.taipy.io/en/latest/manuals/studio/) </div>*
 
 <br>
 <br>
@@ -141,7 +138,7 @@ def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
 <br>
 
 ***<div align="center">Find out more</div>***
-*<div align="center">Check out our [Getting Started](https://docs.taipy.io/en/latest/getting_started/getting-started-core/) and [Documentation](https://docs.taipy.io/en/latest/manuals/core/) </div>*
+*<div align="center">Check out our [Getting Started](https://docs.taipy.io/en/latest/getting_started/) and [Documentation](https://docs.taipy.io/en/latest/manuals/core/) </div>*
 
 <br>
 <br>
@@ -155,43 +152,39 @@ import taipy as tp
 import pandas as pd
 from taipy import Config, Scope, Gui
 
-
 # TAIPY Back-end
-=======
-# Create a Taipy App that will output the 7 best movies for a genre
 
-
-# Filter function for Task
-def filtering_genre(initial_dataset: pd.DataFrame, selected_genre):
+# Filtering function - task
+def filter_genre(initial_dataset: pd.DataFrame, selected_genre):
     filtered_dataset = initial_dataset[initial_dataset['genres'].str.contains(selected_genre)]
     filtered_data = filtered_dataset.nlargest(7, 'Popularity %')
     return filtered_data
-
-# Taipy- Back-End definition
 
 # Load the configuration made with Taipy Studio
 Config.load('config.toml')
 scenario_cfg = Config.scenarios['scenario']
 
-# Run of the Taipy Back-End service
+# Start Taipy Core service
 tp.Core().run()
 
-# Creation of my scenario
+# Create a scenario
 scenario = tp.create_scenario(scenario_cfg)
 
 
-# Taipy -Front-End definition
+# TAIPY Front-end
+# Let's add fa GUI to our back-end for a full application
 
-# Callback definition
-def modify_df(state):
+# Callback definition - submits scenario with genre selection
+def on_genre_selected(state):
     scenario.selected_genre_node.write(state.selected_genre)
     tp.submit(scenario)
-    state.df = scenario.filtered_data.read()    
+    state.df = scenario.filtered_data.read()
 
 # Get list of genres
-list_genres = ['Action', 'Adventure', 'Animation', 'Children', 'Comedy', 'Fantasy', 'IMAX', 'Romance',
-               'Sci-FI', 'Western', 'Crime', 'Mystery', 'Drama', 'Horror', 'Thriller', 'Film-Noir',
-               'War', 'Musical', 'Documentary']
+genres = [
+    'Action', 'Adventure', 'Animation', 'Children', 'Comedy', 'Fantasy', 'IMAX'
+    'Romance','Sci-FI', 'Western', 'Crime', 'Mystery', 'Drama', 'Horror', 'Thriller', 'Film-Noir','War', 'Musical', 'Documentary'
+    ]
 
 # Initialization of variables
 df = pd.DataFrame(columns=['Title', 'Popularity %'])
@@ -199,21 +192,20 @@ selected_genre = 'Action'
 
 ## Set initial value to Action
 def on_init(state):
-    modify_df(state)
+    on_genre_selected(state)
 
-# movie_genre_app
-movie_genre_app = """
+# User interface definition
+my_page = """
 # Film recommendation
 
 ## Choose your favorite genre
-<|{selected_genre}|selector|lov={list_genres}|on_change=modify_df|dropdown|>
+<|{selected_genre}|selector|lov={genres}|on_change=on_genre_selected|dropdown|>
 
-## Here are the top 7 picks
+## Here are the top seven picks by popularity
 <|{df}|chart|x=Title|y=Popularity %|type=bar|title=Film Popularity|>
 """
 
-# run the app
-Gui(page=movie_genre_app).run()
+Gui(page=my_page).run()
 ```
 *RUN*🏃🏽‍♀️
 
@@ -221,7 +213,7 @@ Gui(page=movie_genre_app).run()
 
 <div align="center">🎊TA-DA!🎊</div>
 <br>
-<div align="center"><img src="readme_img/readme_app.gif" width="80%" alt="GUI demo"></img></div>
+<div align="center"><img src="readme_img/readme_app.gif" width="80%" alt="Demo app"></img></div>
 
 <br>
 
@@ -230,7 +222,7 @@ Gui(page=movie_genre_app).run()
 ## ☁️Taipy Cloud☁️
 With Taipy Cloud, you can deploy your Taipy application in a *few clicks* and *for free*!
 
-<div align="center"><img src="readme_img/readme_cloud_demo.gif" alt="Taipy Logo" width="60%" ></img></div>
+<div align="center"><img src="readme_img/readme_cloud_demo.gif" alt="cloud demo" width="60%" ></img></div>
 
 <br>
 <br>
