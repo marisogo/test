@@ -26,7 +26,7 @@
 
 | TAIPY - the frond-end  | TAIPY - the back-end |
 | --------  | -------- |
-|<img src="readme_img/readme_gui_intro.gif" alt="Taipy FE Animation"  width="100%"/> | <img src="readme_img/readme_be_intro.gif" alt="Taipy BE Animation"  width="100%"/> | 
+|<img src="readme_img/gui_creation.webp" alt="Taipy FE Animation"  width="100%"/> | <img src="readme_img/scenario_and_data_mgt.gif" alt="Taipy BE Animation"  width="100%"/> | 
 
 
 </div>
