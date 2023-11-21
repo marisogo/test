@@ -18,6 +18,9 @@
 
 ###  <div align="left">Pure Python & Open-Source. <div align="left"> How? Taipy pops out as a 360° platform to build production-ready web applications.
 
+### <div align="center"> <a href="https://docs.taipy.io/en/latest/">Documentation</a> • <a href="https://discord.com/invite/SJyz2VJGxV">Join our Discord</a> • <a href="https://docs.taipy.io/en/latest/knowledge_base/demos/">Check out Taipy Apps</a>
+</div>
+
 <br>
 
 #  <div align="center"> 📊 We make both ends meet ⚙️ </div>
